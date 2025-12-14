@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "depth-anything-v2"
+version = "0.0.1"
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "opencv-python-headless"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["depth_anything_v2", "metric_depth"]
